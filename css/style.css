@@ -1,5 +1,5 @@
 .container {
-	width: 1170px;
+	max-width: 1170px;
 	margin: 0 auto; 
 }
 .logo {
@@ -8,9 +8,8 @@
 	margin-left: 1px;
 }
 .photo {
-	display: flex;
-	margin-right: 30px;
-	float: left;
+	max-width: 437px;
+	max-height: 424px;
 }
 .header {
 	padding-top: 27px;
@@ -18,14 +17,12 @@
 	padding-bottom: 117px
 }
 .offer{
+	width: 970px;
 	display: flex;
 	color: black;
-	margin-top: 250px;
-    margin-right: 198px;
-    margin-left: 198px;
+	margin:198px auto 198px;
 	align-items: center;
 	justify-content: space-between;
-	justify-content: center;
 }
 * {
 	box-sizing: border-box;
@@ -46,7 +43,6 @@ h2{
 h3{
 	padding: 0;
 	margin: 0;
-	text-align: center;
 	font-size: 36px;
 	font-weight: bolder;
 	font-style: italic;
@@ -112,7 +108,7 @@ ul, li {
 }
 
 .send {
-	width: 346px;
+	width: 100%;
 	height: 87px;
 	border-radius: 117px;
 	font-size: 23px;
@@ -122,8 +118,7 @@ ul, li {
 }
 .texts{
 	text-align: justify;
-  	width: 502px;
-  	height: 404px;
+  	width: calc(100% / 2);
 }
 
 .tutor{
@@ -234,7 +229,22 @@ ul, li {
 .project1 img, .project2 img{
 		max-width: 100%;
 		height: auto;
-	}
+}
+.project1, .project2{
+		display: flex;
+}
+.picture{
+	display: flex;
+}
+.send:hover{
+	background-color: #0062ff;
+	transform: scale(1.05);
+}
+.sends:hover{
+	background-color: ##0062ff;
+	transform: scale(1.05);
+}
+
 @media screen and (max-width: 1200px) {
 	.container {
 		width: 1140px;
@@ -248,6 +258,9 @@ ul, li {
 	.desc-left{
 		width: 42%;
 	}
+	.offer{
+		width: 860px;
+}
 }
 
 @media screen and (max-width: 991px) {
@@ -255,14 +268,11 @@ ul, li {
 		width: 720px;
 	}
 	.photo{
-		width: 97%;
+		width: 90%;
 	}
 	.feedback{
 		flex-wrap: wrap;
 		margin-top: 0;
-	}
-	.project1, .project2{
-		width: 50%;
 	}
 	.pro p{
 		font-size: 12px;
@@ -288,7 +298,16 @@ ul, li {
 		margin-top: 0;
 	}
 	.send{
-		width: 360px;
+		width: 100%;
+	}
+	.offer{
+		width: 700px;
+	}
+	.desc-left{
+		width: 40%
+	}
+	.project1, .project2{
+		width: 55%;
 	}
 }
 
@@ -305,11 +324,103 @@ ul, li {
 	.form{
 		margin-left: 70px;
 	}
+	d {
+		font-size: 12px;
+	}
+	fa {
+		font-size: 16px;
+	}
+	.offer{
+		width: 520px;
+		flex-wrap: wrap;
+		margin-left: 10px;
+	}
+	.photo{
+		width: 100%;
+	}
+	.texts{
+  		width: calc(100% / 1);
+	}
+	h4, h5{
+		font-size: 26px;
+	}
 }
 
 @media screen and (max-width: 575px) {
 	.container {
 		width: 100%;
 		padding: 0 15px;
+	}
+	d {
+		font-size: 9px;
+	}
+	fa {
+		font-size: 10px;
+	}
+	.pro{
+		flex-wrap: wrap;
+	}
+	.projects{
+		margin:198px auto 198px;
+	}
+	.desc-left{
+		width: 100%;
+	}
+	.project1, .project2{
+		width: 100%;
+		justify-content: center;
+	}
+	.pro p{
+		font-size: 18px;
+	}
+}
+@media screen and (max-width: 537px) {
+	.container {
+		width: 450px;
+		padding: 0 15px;
+	}
+	h3{
+		font-size: 24px;
+    	line-height: 40px;
+	}
+}
+@media screen and (max-width: 515px) {
+	.container {
+		width: 450px;
+		padding: 0 15px;
+	}
+	d {
+		display: none;
+	}
+	fa {
+		display: none;
+	}
+	.offer{
+		width: 400px;
+		flex-wrap: wrap;
+		margin-left: 20px;
+	}
+	h3{
+		font-size: 24px;
+    	line-height: 40px;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.container {
+		width: 355px;
+		padding: 0 15px;
+	}
+	.
+	d {
+		display: none;
+	}
+	fa {
+		display: none;
+	}
+	.offer{
+		width: 315px;
+		flex-wrap: wrap;
+		margin-left: 50px;
 	}
 }
